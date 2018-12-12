@@ -10,9 +10,14 @@ services:
      - /etc/localtime:/etc/localtime:ro
     environment:
       POSTGRES_PASSWORD: 123qweRTY
-      
-  adminer:
-    image: adminer
+
+  pgadmin:
+    image: dpage/pgadmin4
     restart: always
     ports:
-      - 8080:8080
+      - "8888:80"
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=pgadmin@topaz.company.ko
+      - PGADMIN_DEFAULT_PASSWORD=123qweRTY
+    links:
+      - db
