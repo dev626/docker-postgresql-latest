@@ -17,7 +17,7 @@ services:
     ports:
       - "8888:80"
     environment:
-      - PGADMIN_DEFAULT_EMAIL=pgadmin@topaz.company.ko
+      - PGADMIN_DEFAULT_EMAIL=pgadmin@darlok.net
       - PGADMIN_DEFAULT_PASSWORD=123qweRTY
     links:
       - db
